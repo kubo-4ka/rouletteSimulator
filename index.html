@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ルーレットシミュレータ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h2>ルーレットシミュレータ</h2>
+
+    <label>項目数:
+      <select id="itemCount"></select>
+    </label>
+    <label>焦らし具合（friction）:
+      <select id="frictionLevel">
+        <option value="slow">焦らす (0.996)</option>
+        <option value="normal" selected>普通 (0.98)</option>
+        <option value="fast">あっさり (0.955)</option>
+      </select>
+    </label>
+    <label>試行回数:
+      <select id="trialCount">
+        <option value="1000">1,000回</option>
+        <option value="10000" selected>10,000回</option>
+        <option value="100000">100,000回</option>
+      </select>
+    </label>
+    <button id="runButton">実行</button>
+
+    <div id="resultArea" class="hidden">
+      <canvas id="resultChart"></canvas>
+      <table id="resultTable"></table>
+    </div>
+
+    <footer class="footer">
+      このアプリは、以下の記事のルーレットアプリのシミュレータです。<br>
+      <a href="https://qiita.com/kubo4ka/items/2217105f2d2dbe4707ee" target="_blank">https://qiita.com/kubo4ka/items/2217105f2d2dbe4707ee</a>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
